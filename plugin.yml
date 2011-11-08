@@ -1,0 +1,15 @@
+author: mahoutsukaii
+description: starts up a server vote
+generator: http://dinnerbone.com/minecraft/tools/pluginator/
+main: jadon.mahoutsukaii.plugins.votecommand.MajorityVote
+name: MajorityVote
+startup: postworld
+url: http://jadon-mc.net/
+version: '1.0'
+
+commands:
+  vote:
+    description: start a vote!
+    usage: |
+      /<command>
+

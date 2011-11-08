@@ -1,0 +1,56 @@
+== Summary: ==
+
+Have there been times on your server when there aren't any Administrators online to handle users requests? Or if you went afk, and a spammer came online and there was nothing that could be done? The possibilities and needs for this plugin are endless.
+
+Introducing the Vote!
+
+Fully customised in a config file, players can perform any command for any other plugin, if they get the required votes.
+All players need to do, is, for example, type /vote mute [player], and if it receives enough votes, the player would be muted.
+
+=== Setting up: ===
+
+There are two main steps in setting up this plugin. Permissions, and the config.yml file.
+
+=== Config.yml ===
+
+After running Majority Vote for the first time, a config.yml file will be generated in /plugins/MajorityVote/ with the default settings, and some examples of syntax.
+
+The values for the settings, and a description are as follows:
+
+minumumPercent: - What is the minimum percentage of players who vote yes on the server to allow the vote to pass?
+
+minimumPlayers: - What is the absolute minimum number of players for the vote to pass?
+
+timeout: - If this amount of time passes (in seconds), the vote will timeout and not be passed.
+
+
+Adding new commands:
+
+under the node Commands, you can add your own custom commands, used in other plugins. Following the examples, you can see each command has a command and a description. The command is what the console will execute if the vote has been passed. There is one variable available, %arg%, which can be set from /vote [command] %arg%.
+
+An example for a mute vote would be:
+
+
+commands:
+    mute:
+        command: mute %arg% 10 minutes You have been vote muted!
+        description: mute a player for 10 minutes.
+
+
+The description can be set to anything you like.
+
+A list of the available commands to use with vote can be found in game by typing /vote.
+
+Permissions
+
+There are 3 nodes to use with Majority Vote.
+
+majorityvote.startvote - is the player allowed to start a vote?
+
+majorityvote.input - is the player allowed to vote?
+
+majorityvote.stop - is the player allowed to overrule, and stop the vote?
+
+=== Final Notes: ===
+
+Remember, any command can be used, there are no defaults, and there must be a plugin to support that command.
